@@ -1,8 +1,6 @@
 Oye {
 	classvar <version; classvar <s; classvar <w;	classvar <toThinkingModule; 	classvar <printI; classvar <b;    classvar <openDoc; classvar <currentDocument; 	classvar <state; 	classvar <musicalMode; classvar <queueOfTypingOp; 	classvar <op; 	classvar <contador; classvar <lThreeInputs; classvar <lThreePitchInputs; classvar <pitchSet; classvar <newPitchSet; classvar <lOneOutputs; classvar <firstPattern; 	classvar <secondPattern; classvar <potentialChangesOnBass; classvar <potentialChangesOnPad ; classvar <potentialChangesOnMelody; classvar <firstPatternChosen; classvar <secondPatternChosen; classvar <instrumentsAlreadyUsedInPad; classvar <durationsAlreadyUsedInPad; classvar <panAlreadyUsedInPad; classvar <instrumentsAlreadyUsedInMel; classvar <durationsAlreadyUsedInMel; classvar <patternsAlreadyUsedInMel; classvar <relAlreadyUsedInMel; classvar <panAlreadyUsedInMel; classvar <durAlreadyUsedInCowbell; classvar <panAlreadyUsedInCowbell; classvar <panAlreadyUsedInKick; classvar <panAlreadyUsedInGuira; classvar <oldMelPitches; classvar <presentYourself; classvar <cMajorScale; classvar <dMajorScale; classvar <eMajorScale; classvar <fMajorScale; classvar <gMajorScale; classvar <aMajorScale; classvar <bMajorScale; classvar <currentMelDb; classvar <currentMelDb; classvar <currentMelDb; classvar <	hasKick; classvar <hasGuira; classvar <hasCowbell; classvar <numOfBassChords; classvar <numOfPadChords; classvar <	luisIsSounding; classvar <loudnessOfinstrumentsSounding; classvar <isNetReady;  classvar <showSlidersL1; classvar <netPort; classvar <showNetInput; classvar <luisDoc; classvar <listOfPossiblePitches; classvar <root; classvar <majorChord; classvar <chord; classvar <minorChord; classvar <listOfPossibilitiesForFirstPattern; classvar <lThreeAvailInputs; classvar <melPitches;  classvar <padPitches; classvar <bassPitches; classvar <listOfPossibilitiesForSecondPattern; classvar <newMelPitches; classvar <instrumentsAvailForMel; classvar <newInstrumentForMel; classvar <durationsAvailForMel; classvar <newDurationsForMel; classvar <patternAvailForMel; classvar <newPatternForMel; classvar <relAvailForMel; classvar <newRelForMel; classvar <panAvailForMel; classvar <newPanForMel; classvar <pastMelDb; classvar <newMelDb; classvar <oldBassPitches; classvar <newBassPitches; classvar <moreBassPitches; classvar <pastBajoDb; classvar <newBajoDb; classvar <oldPadChordPitches; classvar <newPadPitches; classvar <moreChordsPitches; classvar <instrumentsAvailForPad; classvar <newInstrumentForPad; classvar <durationsAvailForPad; classvar <newDurationsForPad; classvar <panAvailForPad; classvar <newPanForPad; classvar <pastPadDb; classvar <newPadDb; classvar <potentialChangesOnRitmo; classvar <dbAlreadyUsedInKick; classvar <kick; classvar <dbAlreadyUsedInCowbell; 	classvar <cowbell; classvar <dbAlreadyUsedInGuira; classvar <guira; classvar <panAvailForKick; classvar <newPanForKick; classvar <panAvailForGuira; classvar <newPanForGuira; classvar <panAvailForCowbell; classvar <newPanForCowbell; classvar <durAvailForCowbell; classvar <newDurForCowbell; classvar <decision; 	classvar <waitEnd; classvar <findThingToErase; classvar <inWhichInstrument; classvar <whereIsLastParenthesisOfThatInstrument; classvar <whereIsVarToFind; classvar <whereIsThingToFind; classvar <locateDoubleSpacesBeforeSqBracket; classvar <text; classvar <spacesBeforeSqBracket; classvar <currentTime; classvar <mMW; classvar <mMS;  classvar <mBW; classvar <mBS; classvar <mPW; classvar <mPS;  classvar <mCBW; classvar <mCBS; classvar <mKW; classvar <mKS; classvar <mGW; classvar mGS;  classvar <loudnessL3W; classvar <loudnessL3S; classvar <melW; classvar <padW; classvar <bassW; classvar <guiraW; classvar <cowbellW; classvar <kickW; classvar <melS; classvar <padS; classvar <bassS; classvar <guiraS; classvar <cowbellS; classvar <kickS; classvar <cW; classvar <csW; classvar <dW; classvar <dsW; classvar <eW; classvar <fW; classvar <fsW; classvar <gW; classvar <gsW; classvar <aW; classvar <asW; classvar <bW; classvar <energyW; classvar <cS; classvar <csS; classvar <dS; classvar <dsS; classvar <eS; classvar <fS; classvar <fsS; classvar <gS; classvar <gsS; classvar <aS; classvar <asS;  classvar <bS; classvar <energyS;  classvar <makeKick; classvar <makeGuira; classvar <makeCowBell; classvar <makeBajo; classvar <makeMel; classvar <makePad;  classvar <loudnessL1; classvar <loudnessL3; classvar <d; classvar <useC; classvar <useCsharp;  classvar <useD; classvar <useDsharp; classvar <useE; classvar <useF; classvar <useFsharp; classvar <useG; classvar <useGsharp; classvar <useA;  classvar  <useAsharp; classvar <useB; classvar <energyL3; classvar <usecW; classvar <usecS;   classvar <usecsW; classvar <usecsS; classvar<usedW; classvar <usedS; classvar < usedsW; 	classvar <usedsS; classvar <useeW; classvar <useeS; classvar <usefW; classvar <usefS; classvar <usefsW;  classvar <usefsS; classvar <usegW; classvar <usegS; classvar <usegsW; classvar<usegsS; classvar <useaW; classvar <useaS; classvar <useasW; classvar <useasS; classvar <usebS; classvar <usebW; classvar <energyL3W; classvar <energyL3S;   classvar makeMelodyString; classvar makeBajoString; classvar <mapSlidersL3; classvar <pitchCase;
 
-
-
 	*init {
 		version = "Jun 2017";
 		RGGTRN.turboCargar;
@@ -52,7 +50,6 @@ Oye {
 		numOfPadChords = 0;
 		luisIsSounding = false;
 		loudnessOfinstrumentsSounding = 0;
-
 		("Oye v.1.0_" ++ version ++ ": initalized").postln;
 	}
 
@@ -116,9 +113,9 @@ Oye {
 
 		if(musicalMode == "addFirstPattern", {
 			//select available roles from l3 Inputs..
-			listOfPossibilitiesForFirstPattern = Array.new;
+			/*	listOfPossibilitiesForFirstPattern = Array.new;
 			lThreeAvailInputs = lThreeInputs.keysValuesDo{arg key,value; if (value >= 0.8,
-				{listOfPossibilitiesForFirstPattern = listOfPossibilitiesForFirstPattern.add(key)}
+			{listOfPossibilitiesForFirstPattern = listOfPossibilitiesForFirstPattern.add(key)}
 			)};
 			// pick a role for that role...based on coins
 			listOfPossibilitiesForFirstPattern.remove(\loudness); listOfPossibilitiesForFirstPattern.remove(\useC); listOfPossibilitiesForFirstPattern.remove(\useCsharp);
@@ -126,9 +123,9 @@ Oye {
 			listOfPossibilitiesForFirstPattern.remove(\useF); listOfPossibilitiesForFirstPattern.remove(\useFsharp); listOfPossibilitiesForFirstPattern.remove(\useG);
 			listOfPossibilitiesForFirstPattern.remove(\useGsharp); listOfPossibilitiesForFirstPattern.remove(\useA); listOfPossibilitiesForFirstPattern.remove(\useAsharp);
 			listOfPossibilitiesForFirstPattern.remove(\useB); listOfPossibilitiesForFirstPattern.remove(\energy);
-			listOfPossibilitiesForFirstPattern = listOfPossibilitiesForFirstPattern.choose; 	if (lThreeInputs	[\makeKick] >=0.8, {listOfPossibilitiesForSecondPattern.remove(\makeGuiro); listOfPossibilitiesForSecondPattern.remove(\makeCowbell)});
-			firstPatternChosen = listOfPossibilitiesForFirstPattern.asString;
-
+			listOfPossibilitiesForFirstPattern = listOfPossibilitiesForFirstPattern.choose; 	if (lThreeInputs	[\makeKick] >=0.8, {listOfPossibilitiesForSecondPattern.remove(\makeGuiro); listOfPossibilitiesForSecondPattern.remove(\makeCowbell)});*/
+			//firstPatternChosen = listOfPossibilitiesForFirstPattern.asString;
+			firstPatternChosen = "makeCowBell";
 			//pick a pattern
 			if (firstPatternChosen == "makeMelody", {
 				firstPattern = "Melody";
@@ -149,7 +146,7 @@ Oye {
 				firstPattern = "Pad";
 				padPitches = [pitchSet[0],pitchSet[1],pitchSet[2]];
 				musicalMode = "waitingToHearTheChanges";
-				^["makePad", "Keyboard.toca(inst: 'padE',"  ++ "\n"
+				^["makePad", "Teclado.toca(inst: 'padE',"  ++ "\n"
 					++ "nota: "  ++ "Pseq(#[" ++ "r, " ++ padPitches.asString ++ "]-12, inf)," ++ "\n"
 					++ "dur: 0.5," ++ "\n"
 					++ "atk: 0.05," ++ "\n"
@@ -166,7 +163,7 @@ Oye {
 				musicalMode = "waitingToHearTheChanges";
 				^["makeBajo", "Bajo.toca(" ++ "\n" ++ "nota: " ++ "Pseq(" ++ bassPitches.asString ++ "-12" ++", inf)," ++ "\n"
 					++ "pan: 0," ++ "\n"
-					++ "db: -19" ++ "\n"
+					++ "db: -22" ++ "\n"
 					++ ");" ++ "\n"];
 			});
 
@@ -178,11 +175,6 @@ Oye {
 					++"campanaDb: -20," ++ "\n"
 					++"campanaDur: 1,"++ "\n"
 					++"campanaPan: 0,"++ "\n"
-					++ "bomboDb: -15,"++ "\n"
-					++ "bomboPan: 0,"++ "\n"
-					++"guiraDb: -40,"++ "\n"
-					++"guiraDur: 0.25,"++ "\n"
-					++ "guiraPan: 0,"++ "\n"
 					++");"++ "\n"];
 			});
 
@@ -191,15 +183,9 @@ Oye {
 				musicalMode = "waitingToHearTheChanges";
 				hasKick = true;
 				^["makeKick", "Ritmo.toca("++"\n"
-					++"bomboDb: -15," ++"\n"
+					++"bomboDb: -20," ++"\n"
 					++"bomboPan: 0," ++"\n"
-					++"campanaDb: -200, " ++"\n"
-					++"campanaDur: 1," ++"\n"
-					++"campanaPan: 0," ++"\n"
-					++"guiraDb: -200," ++"\n"
-					++"guiraDur: 0.25," ++"\n"
-					++ "guiraPan: 0"++ "\n"
-					");"++ "\n"];
+					++ ");"++ "\n"];
 			});
 
 			if   (firstPatternChosen == "makeGuira", {
@@ -210,12 +196,7 @@ Oye {
 					++"guiraDb: -60," ++"\n"
 					++"guiraDur: 0.25,"++"\n"
 					++ "guiraPan: 0,"++"\n"
-					++"bomboDb: -40," ++"\n"
-					++"bomboPan: 0," ++"\n"
-					++"campanaDb: -200,"++"\n"
-					++"campanaDur: 1," ++"\n"
-					++"campanaPan: 0,"++"\n"
-					++"\n"++");"];
+					++");" ++ "\n"];
 			});
 		});
 
@@ -227,10 +208,12 @@ Oye {
 			)};
 
 			// pick a second role for that role
-			listOfPossibilitiesForSecondPattern.remove(\loudness); listOfPossibilitiesForSecondPattern.remove(\useCmajorScale);listOfPossibilitiesForSecondPattern.remove(\useCsharp); listOfPossibilitiesForSecondPattern.remove(\useD); listOfPossibilitiesForSecondPattern.remove(\useDsharp); listOfPossibilitiesForSecondPattern.remove(\useE); listOfPossibilitiesForSecondPattern.remove(\useF); listOfPossibilitiesForSecondPattern.remove(\useFsharp); listOfPossibilitiesForSecondPattern.remove(\useG);   listOfPossibilitiesForSecondPattern.remove(\useGsharp); listOfPossibilitiesForSecondPattern.remove(\useA); listOfPossibilitiesForSecondPattern.remove(\useAsharp); listOfPossibilitiesForSecondPattern.remove(\useB); listOfPossibilitiesForSecondPattern.remove(\energy); 	listOfPossibilitiesForSecondPattern.remove(firstPatternChosen.asSymbol); if (firstPattern == "Ritmo", { listOfPossibilitiesForSecondPattern.remove(\makeKick);  listOfPossibilitiesForSecondPattern.remove(\makeGuiro);  listOfPossibilitiesForSecondPattern.remove(\makeCowbell)});
+			listOfPossibilitiesForSecondPattern.remove(\loudness); listOfPossibilitiesForSecondPattern.remove(\useCmajorScale);listOfPossibilitiesForSecondPattern.remove(\useCsharp); listOfPossibilitiesForSecondPattern.remove(\useD); listOfPossibilitiesForSecondPattern.remove(\useDsharp); listOfPossibilitiesForSecondPattern.remove(\useE); listOfPossibilitiesForSecondPattern.remove(\useF); listOfPossibilitiesForSecondPattern.remove(\useFsharp); listOfPossibilitiesForSecondPattern.remove(\useG);   listOfPossibilitiesForSecondPattern.remove(\useGsharp); listOfPossibilitiesForSecondPattern.remove(\useA); listOfPossibilitiesForSecondPattern.remove(\useAsharp); listOfPossibilitiesForSecondPattern.remove(\useB); listOfPossibilitiesForSecondPattern.remove(\energy); 	listOfPossibilitiesForSecondPattern.remove(firstPatternChosen.asSymbol);
+if (firstPattern == "Ritmo", { listOfPossibilitiesForSecondPattern.remove(\makeKick);  listOfPossibilitiesForSecondPattern.remove(\makeGuira);   listOfPossibilitiesForSecondPattern.remove(\makeCowBell)});
 			if (listOfPossibilitiesForSecondPattern.notEmpty, {
 				listOfPossibilitiesForSecondPattern = listOfPossibilitiesForSecondPattern.choose;
 				secondPatternChosen = listOfPossibilitiesForSecondPattern.asString;
+
 
 				//pick a second pattern
 				if (secondPatternChosen == "makeMelody", {
@@ -252,7 +235,7 @@ Oye {
 					secondPattern = "Pad";
 					padPitches =[pitchSet[0], pitchSet[1], pitchSet[2]];
 					musicalMode = "waitingToHearTheChanges";
-					^["makePad", "Keyboard.toca(inst: 'padE',"  ++ "\n"
+					^["makePad", "Teclado.toca(inst: 'padE',"  ++ "\n"
 						++ "nota: "  ++ "Pseq(#[" ++ "r, " ++ padPitches.asString ++ "]-12, inf)," ++ "\n"
 						++ "dur: 0.5," ++ "\n"
 						++ "atk: 0.05," ++ "\n"
@@ -270,7 +253,7 @@ Oye {
 					^["makeBajo", "Bajo.toca(" ++ "\n"
 						++ "nota: " ++ "Pseq(" ++ bassPitches.asString ++ "-12" ++", inf)," ++ "\n"
 						++ "pan: 0," ++ "\n"
-						++ "db: -19" ++ "\n"
+						++ "db: -22" ++ "\n"
 						++ ");"++ "\n"];
 				});
 
@@ -282,11 +265,6 @@ Oye {
 						++"campanaDb: -15," ++ "\n"
 						++"campanaDur: 1,"++ "\n"
 						++"campanaPan: 0,"++ "\n"
-						++ "bomboDb: -15,"++ "\n"
-						++ "bomboPan: 0,"++ "\n"
-						++"guiraDb: -40,"++ "\n"
-						++"guiraDur: 0.25,"++ "\n"
-						++ "guiraPan: 0,"++ "\n"
 						++");"++ "\n"];
 				});
 
@@ -297,15 +275,8 @@ Oye {
 					^["makeKick", "Ritmo.toca("++"\n"
 						++"bomboDb: -15," ++"\n"
 						++"bomboPan: 0," ++"\n"
-						++"campanaDb: -200, " ++"\n"
-						++"campanaDur: 1," ++"\n"
-						++"campanaPan: 0," ++"\n"
-						++"guiraDb: -200," ++"\n"
-						++"guiraDur: 0.25," ++"\n"
-						++ "guiraPan: 0"++ "\n"
 						++");"++ "\n"];
 				});
-
 
 				if   (secondPatternChosen == "makeGuira", {
 					secondPattern = "Ritmo";
@@ -315,12 +286,7 @@ Oye {
 						++"guiraDb: -60," ++"\n"
 						++"guiraDur: 0.25,"++"\n"
 						++ "guiraPan: 0,"++"\n"
-						++"bomboDb: -40," ++"\n"
-						++"bomboPan: 0," ++"\n"
-						++"campanaDb: -200,"++"\n"
-						++"campanaDur: 1," ++"\n"
-						++"campanaPan: 0,"++"\n"
-						++"\n"++");"];
+						++");" ++ "\n"];
 				});
 			});
 		});
@@ -527,7 +493,7 @@ Oye {
 								musicalMode = "waitingToHearTheChanges";
 								numOfPadChords = numOfPadChords + 1;
 								potentialChangesOnPad = nil;
-								^["addMoreChordsToPad", moreChordsPitches.asString, "Keyboard", ");", oldPadChordPitches.asString, "nota: "];
+								^["addMoreChordsToPad", moreChordsPitches.asString, "Teclado", ");", oldPadChordPitches.asString, "nota: "];
 							});
 						}, { musicalMode = "waitingToHearTheChanges";
 							potentialChangesOnPad = nil;
@@ -536,7 +502,7 @@ Oye {
 						potentialChangesOnPad = nil;
 					});
 				}, {oldPadChordPitches
-					^["deleteChordsFromPad", moreChordsPitches.asString, "Keyboard", ");", oldPadChordPitches.asString, "nota: "];});
+					^["deleteChordsFromPad", moreChordsPitches.asString, "Teclado", ");", oldPadChordPitches.asString, "nota: "];});
 			});
 
 			if(potentialChangesOnPad == "tryDifferentInstrumentOnPad", {
@@ -547,7 +513,7 @@ Oye {
 				instrumentsAlreadyUsedInPad = instrumentsAlreadyUsedInPad.addFirst(newInstrumentForPad);
 				musicalMode = "waitingToHearTheChanges";
 				potentialChangesOnPad = nil;
-				^["tryDifferentInstrumentOnPad", "'" ++ newInstrumentForPad.asString ++ "'", "Keyboard", ");", "'" ++ instrumentsAlreadyUsedInPad[1].asString ++ "'", "inst: "];
+				^["tryDifferentInstrumentOnPad", "'" ++ newInstrumentForPad.asString ++ "'", "Teclado", ");", "'" ++ instrumentsAlreadyUsedInPad[1].asString ++ "'", "inst: "];
 			});
 
 			if(potentialChangesOnPad == "tryDifferentDurationOnPad", {
@@ -558,7 +524,7 @@ Oye {
 				durationsAlreadyUsedInPad = durationsAlreadyUsedInPad.addFirst(newDurationsForPad);
 				musicalMode = "waitingToHearTheChanges";
 				potentialChangesOnPad = nil;
-				^["tryDifferentDurationOnPad", newDurationsForPad.asString, "Keyboard", ");", durationsAlreadyUsedInPad[1].asString, "dur: "];
+				^["tryDifferentDurationOnPad", newDurationsForPad.asString, "Teclado", ");", durationsAlreadyUsedInPad[1].asString, "dur: "];
 			});
 
 			if(potentialChangesOnPad == "tryDifferentPanOnPad", {
@@ -569,7 +535,7 @@ Oye {
 				panAlreadyUsedInPad = panAlreadyUsedInPad.addFirst(newPanForPad);
 				musicalMode = "waitingToHearTheChanges";
 				potentialChangesOnPad = nil;
-				^["tryDifferentPanOnPad", newPanForPad.asString, "Keyboard", ");", panAlreadyUsedInPad[1].asString, "pan: "];
+				^["tryDifferentPanOnPad", newPanForPad.asString, "Teclado", ");", panAlreadyUsedInPad[1].asString, "pan: "];
 			});
 
 			if(potentialChangesOnPad == "endingPad", {
@@ -578,42 +544,49 @@ Oye {
 					currentMelDb = currentMelDb - 1;
 					newPadDb = pastPadDb;
 					musicalMode = "waitingToHearTheChanges";
-					^["endingPad", pastPadDb.asString, "Keyboard", ");", newPadDb.asString, "db:"];
+					^["endingPad", pastPadDb.asString, "Teclado", ");", newPadDb.asString, "db:"];
 				}, {musicalMode = "waitingToHearTheChanges";});
 			});
 		});
 
 		//////////////////////////////potential changes for Ritmo///////////////////////////////
 		if (musicalMode == "changeRitmo", {
-			potentialChangesOnRitmo = ["addCowbell", "addKick", "addGuira", "tryDifferentPanOnGuira", "tryDifferentPanOnKick", "tryDifferentPanOnCowbell", /*"tryDifferentDurOnKick", "tryDifferentDurOnGuira",*/ "tryDifferentDurOnCowbell" /*, "makeKickFreqArray"*/].choose;
+			potentialChangesOnRitmo = ["addKick", "addGuira", "addCowbell", "tryDifferentPanOnGuira", "tryDifferentPanOnKick", "tryDifferentPanOnCowbell"].choose;
 			["potentialChangesOnRitmo: " ++ potentialChangesOnRitmo].postln;
 
 			if(potentialChangesOnRitmo == "addKick", {
 				if (hasKick == false, {
-					dbAlreadyUsedInKick = -40;
-					kick = true;
-					^["addKick", "0.10", "Ritmo", ");", dbAlreadyUsedInKick.asString, "bomboDb: "];
+					hasKick = true;
+					musicalMode = "waitingToHearTheChanges";
+					potentialChangesOnRitmo = nil;
+					^["addKick", "," ++ "\n" ++ "bomboDb: -20,", "Ritmo", ");", ",",  ","];
+				}, {musicalMode = "waitingToHearTheChanges";
 				});
 			});
 
 			if(potentialChangesOnRitmo == "addCowbell", {
-				if (hasKick == false, {
-					dbAlreadyUsedInCowbell = -60;
-					cowbell= true;
-					^["addCowbell", "0.10", "Ritmo", ");", dbAlreadyUsedInCowbell.asString, "campanaDb: "];
+				if (hasCowbell == false, {
+					hasCowbell= true;
+					musicalMode = "waitingToHearTheChanges";
+					potentialChangesOnRitmo = nil;
+					^["addCowbell",  "," ++ "\n" ++ "campanaDb: -20,","Ritmo", ");", ",",  ","];
+				}, {musicalMode = "waitingToHearTheChanges";
 				});
 			});
 
 			if(potentialChangesOnRitmo == "addGuira", {
 				if (hasGuira == false, {
 					dbAlreadyUsedInGuira = -60;
-					guira= true;
-					^["addGuira", "0.10", "Ritmo", ");", dbAlreadyUsedInGuira.asString, "guiraDb: "];
+					hasGuira= true;
+					musicalMode = "waitingToHearTheChanges";
+					potentialChangesOnRitmo = nil;
+					^["addGuira", "," ++ "\n" ++ "guiraDb: -60,", "Ritmo", ");", ",",  ","];
+				}, {musicalMode = "waitingToHearTheChanges";
 				});
 			});
 
 			if(potentialChangesOnRitmo == "tryDifferentPanOnKick", {
-				if (kick == true, {
+				if (hasKick == true, {
 					panAvailForKick = [-1, 0, 1];
 					panAvailForKick.remove(panAlreadyUsedInKick[0]);
 					newPanForKick = panAvailForKick.choose;
@@ -621,74 +594,31 @@ Oye {
 					musicalMode = "waitingToHearTheChanges";
 					potentialChangesOnRitmo = nil;
 					^["tryDifferentPanOnKick", newPanForKick.asString, "Ritmo", ");", panAlreadyUsedInKick[1].asString, "bomboPan: "];
-				}, {musicalMode == "changeRitmo"});
+				}, {musicalMode = "waitingToHearTheChanges"});
 			});
-
-			/*
-			if(potentialChangesOnRitmo == "tryDifferentDurOnKick", {
-			if (kick == true, {
-			~durAvailForKick = [0.5, 1]; 		//which panning should we use in Pad?
-			~durAvailForKick.remove(~durAlreadyUsedInKick[0]);
-			~newDurForKick = ~durAvailForKick.choose; //choose from that list the available ones
-			//save list of instruments as oldPadInstruments
-			~durAlreadyUsedInKick = ~durAlreadyUsedInKick.addFirst(~newDurForKick);
-			musicalMode = "waitingToHearTheChanges";
-			potentialChangesOnRitmo = nil;
-			^["tryDifferentDurOnKick", ~newDurForKick.asString, "Ritmo", ");", ~durAlreadyUsedInKick[1].asString, "bomboPan: "];
-			}, {musicalMode == "changeRitmo"});
-			});*/
 
 			if(potentialChangesOnRitmo == "tryDifferentPanOnGuira", {
 				if (hasGuira == true, {
-					panAvailForGuira = [-1, 0, 1]; 		//which panning should we use in Pad?
+					panAvailForGuira = [-1, 0, 1];
 					panAvailForGuira.remove(panAlreadyUsedInGuira[0]);
-					newPanForGuira = panAvailForGuira.choose; //choose from that list the available ones
-					//save list of instruments as oldPadInstruments
+					newPanForGuira = panAvailForGuira.choose;
 					panAlreadyUsedInGuira = panAlreadyUsedInGuira.addFirst(newPanForGuira);
 					musicalMode = "waitingToHearTheChanges";
 					potentialChangesOnRitmo = nil;
 					^["tryDifferentPanOnGuira", newPanForGuira.asString, "Ritmo", ");", panAlreadyUsedInGuira[1].asString, "guiraPan: "];
-				}, {musicalMode == "changeRitmo"});
+				}, {musicalMode = "waitingToHearTheChanges"});
 			});
-
-			/*		if(potentialChangesOnRitmo == "tryDifferentDurOnGuira", {
-			if (guira== true, {
-			~durAvailForGuira = [0.5, 1]; 		//which panning should we use in Pad?
-			~durAvailForGuira.remove(panAlreadyUsedInGuira[0]);
-			~newDurForGuira = ~durAvailForGuira.choose; //choose from that list the available ones
-			//save list of instruments as oldPadInstruments
-			~durAlreadyUsedInGuira = ~durAlreadyUsedInGuira.addFirst(~newDurForGuira);
-			musicalMode = "waitingToHearTheChanges";
-			potentialChangesOnRitmo = nil;
-			^["tryDifferentDurOnGuira", ~newDurForGuira.asString, "Ritmo", ");", ~durAlreadyUsedInGuira[1].asString, "guiraPan: "];
-			}, {musicalMode == "changeRitmo"});
-			});*/
-
 
 			if(potentialChangesOnRitmo == "tryDifferentPanOnCowbell", {
 				if (hasCowbell == true, {
-					panAvailForCowbell = [-1, 0, 1]; 		//which panning should we use in Pad?
+					panAvailForCowbell = [-1, 0, 1];
 					panAvailForCowbell.remove(panAlreadyUsedInCowbell[0]);
-					newPanForCowbell= panAvailForCowbell.choose; //choose from that list the available ones
-					//save list of instruments as oldPadInstruments
+					newPanForCowbell= panAvailForCowbell.choose;
 					panAlreadyUsedInCowbell = panAlreadyUsedInCowbell.addFirst(newPanForCowbell);
 					musicalMode = "waitingToHearTheChanges";
 					potentialChangesOnRitmo = nil;
-					^["tryDifferentPanOnCowbell", newPanForCowbell.asString, "Ritmo", ");", panAlreadyUsedInCowbell[1].asString, "guiraPan: "];
-				}, {musicalMode == "changeRitmo"});
-			});
-
-			if(potentialChangesOnRitmo == "tryDifferentPanOnCowbell", {
-				if (hasCowbell == true, {
-					durAvailForCowbell = [0.5, 1]; 		//which panning should we use in Pad?
-					durAvailForCowbell.remove(durAlreadyUsedInCowbell[0]);
-					newDurForCowbell= durAvailForCowbell.choose; //choose from that list the available ones
-					//save list of instruments as oldPadInstruments
-					durAlreadyUsedInCowbell = durAlreadyUsedInCowbell.addFirst(newDurForCowbell);
-					musicalMode = "waitingToHearTheChanges";
-					potentialChangesOnRitmo = nil;
-					^["tryDifferentPanOnCowbell", newDurForCowbell.asString, "Ritmo", ");", durAlreadyUsedInCowbell[1].asString, "guiraPan: "];
-				}, {musicalMode == "changeRitmo"});
+					^["tryDifferentPanOnCowbell", newPanForCowbell.asString, "Ritmo", ");", panAlreadyUsedInCowbell[1].asString, "campanaPan: "];
+				}, {musicalMode = "waitingToHearTheChanges"});
 			});
 		});
 
@@ -952,6 +882,76 @@ Oye {
 
 		if(decision[0] == "endingPad", {
 			"endingPad".postln;
+			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
+			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
+			Oye.addLocateThingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addDeleteOpToQueue(decision[4]);
+			Oye.addReplaceTextOpToQueue(decision[1]);
+			Oye.addEvaluateOpToQueue;
+			^"typing";
+		});
+
+		///////////////////////////changes in Ritmo//////////////////////////////////////////////////
+		if(decision[0] == "addKick", {
+			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
+			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
+			Oye.addLocateThingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addDeleteOpToQueue(decision[4]);
+			Oye.addReplaceTextOpToQueue(decision[1]);
+			Oye.addEvaluateOpToQueue;
+			^"typing";
+		});
+
+
+
+		if(decision[0] == "addGuira", {
+			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
+			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
+			Oye.addLocateThingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addDeleteOpToQueue(decision[4]);
+			Oye.addReplaceTextOpToQueue(decision[1]);
+			Oye.addEvaluateOpToQueue;
+			^"typing";
+		});
+
+
+		if(decision[0] == "addCowbell", {
+			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
+			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
+			Oye.addLocateThingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addDeleteOpToQueue(decision[4]);
+			Oye.addReplaceTextOpToQueue(decision[1]);
+			Oye.addEvaluateOpToQueue;
+			^"typing";
+		});
+
+		if(decision[0] == "tryDifferentPanOnGuira", {
+			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
+			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
+			Oye.addLocateThingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addDeleteOpToQueue(decision[4]);
+			Oye.addReplaceTextOpToQueue(decision[1]);
+			Oye.addEvaluateOpToQueue;
+			^"typing";
+		});
+
+		if(decision[0] == "tryDifferentPanOnKick", {
+			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
+			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
+			Oye.addLocateThingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
+			Oye.addDeleteOpToQueue(decision[4]);
+			Oye.addReplaceTextOpToQueue(decision[1]);
+			Oye.addEvaluateOpToQueue;
+			^"typing";
+		});
+
+		if(decision[0] == "tryDifferentPanOnCowbell", {
 			Oye.addUpdateThingsToFindOpToQueue(decision[1], decision[2], decision[3], decision[4], decision[5]);
 			Oye.addLocateEndingOpToQueue(decision[1], decision[2], decision[3], decision[4] );
 			Oye.addLocateVarOpToQueue(decision[1], decision[2], decision[3], decision[4]);
@@ -1270,7 +1270,7 @@ Oye {
 		w = Window.new("Oye: L3 Inputs testing Sliders", Rect(170,-300, 600, 420)).front;
 		makeMelodyString=StaticText(w,Rect(20,20,150,20)); 	makeMelodyString.string= "makeMelody"; mMW = NumberBox(w, Rect(20, 40, 150, 20)); mMS = Slider(w, Rect(20, 60, 150, 20));
 		makeBajoString=StaticText(w,Rect(20,80,150,20)); makeBajoString.string= "makeBajo";	mBW = NumberBox(w, Rect(20,100,150,20)); mBS = Slider(w, Rect(20, 120, 150, 20));
-		makePadString=StaticText(w,Rect(20,140,150,20)); makePadString.string= "makeKeyboard/synthesizer"; mPW = NumberBox(w, Rect(20,160,150,20)); 	mPS = Slider(w, Rect(20, 180, 150, 20));
+		makePadString=StaticText(w,Rect(20,140,150,20)); makePadString.string= "makeTeclado/synthesizer"; mPW = NumberBox(w, Rect(20,160,150,20)); 	mPS = Slider(w, Rect(20, 180, 150, 20));
 		makeCowBellString=StaticText(w,Rect(20,200,150,20)); 	makeCowBellString.string= "makeCowBell"; 	mCBW = NumberBox(w, Rect(20, 220, 150, 20)); 	mCBS = Slider(w, Rect(20, 240, 150, 20));
 		makeKickString=StaticText(w,Rect(20,260,150,20)); 	makeKickString.string= "makeKick"; mKW = NumberBox(w, Rect(20, 280,150,20)); mKS = Slider(w, Rect(20, 300, 150, 20));
 		makeGuiraString=StaticText(w,Rect(20,320,150,20)); makeGuiraString.string= "makeGuira"; mGW = NumberBox(w, Rect(20, 340, 150, 20)); 	mGS = Slider(w, Rect(20, 360, 150, 20));
@@ -1350,7 +1350,7 @@ Oye {
 			var melString, padString, bassString, cowbellString, kickString, guiraString, cString, cSharpString, dString, dSharpString, eString, fString, fSharpString, gString, gSharpString, aString, aSharpString, bString, energyString;
 			w = Window.new("Oye: Layer 1", Rect(-800, -300, 600, 420)).front;
 			melString=StaticText(w,Rect(20,20,150,20)); melString.string= "melody"; melW = NumberBox(w, Rect(20,40,150,20)); melS = Slider(w, Rect(20, 60, 150, 20));
-			padString=StaticText(w,Rect(20,140,150,20)); padString.string= "keyboard/synthesizer"; padW = NumberBox(w, Rect(20,160,150,20)); padS = Slider(w, Rect(20, 180, 150, 20));
+			padString=StaticText(w,Rect(20,140,150,20)); padString.string= "Teclado/synthesizer"; padW = NumberBox(w, Rect(20,160,150,20)); padS = Slider(w, Rect(20, 180, 150, 20));
 			bassString=StaticText(w,Rect(20,80,150,20)); 	bassString.string= "bass"; 	bassW = NumberBox(w, Rect(20,100,150,20)); 	bassS = Slider(w, Rect(20, 120, 150, 20));
 			cowbellString=StaticText(w,Rect(20,200,150,20));  cowbellString.string= "cowbell"; cowbellW = NumberBox(w, Rect(20, 220, 150, 20)); 	cowbellS = Slider(w, Rect(20, 240, 150, 20));
 			kickString=StaticText(w,Rect(20,260,150,20)); kickString.string= "kick"; kickW = NumberBox(w, Rect(20, 280, 150, 20));	kickS = Slider(w, Rect(20, 300, 150, 20));
@@ -1584,7 +1584,7 @@ Oye {
 	}
 
 	*printDesiredOutputs{
-		["desiredOutputs "	++ ["kick " ++ d[\desiredKick].asFloat, "guira " ++ d[\desiredGuira].asFloat,"cowbell " ++ d[\desiredCowbell].asFloat, "keyboard " ++ d[\desiredPad].asFloat, "bass " ++ d[\desiredBass].asFloat, 	"Mel " ++ d[\desiredMel].asFloat, 	"C: " ++ d[\desiredC].asFloat,  "C#: " ++ d[\desiredCsharp].asFloat,  "D: " ++ d[\desiredD].asFloat,"D#: " ++ d[\desiredDsharp].asFloat,  "E: " ++ d[\desiredE].asFloat,  "F: " ++ d[\desiredF].asFloat,  "Fsharp: " ++  d[\desiredFsharp].asFloat,  "G: " ++ d[\desiredG].asFloat,  "Gsharp: " ++ d[\desiredGsharp].asFloat,  "A: " ++ d[\desiredA].asFloat,  "Asharp: " ++ d[\desiredAsharp].asFloat,  "B: " ++ d[\desiredB].asFloat], "energy: " ++d[\desiredEnergy].asFloa].postln;
+		["desiredOutputs "	++ ["kick " ++ d[\desiredKick].asFloat, "guira " ++ d[\desiredGuira].asFloat,"cowbell " ++ d[\desiredCowbell].asFloat, "Teclado " ++ d[\desiredPad].asFloat, "bass " ++ d[\desiredBass].asFloat, 	"Mel " ++ d[\desiredMel].asFloat, 	"C: " ++ d[\desiredC].asFloat,  "C#: " ++ d[\desiredCsharp].asFloat,  "D: " ++ d[\desiredD].asFloat,"D#: " ++ d[\desiredDsharp].asFloat,  "E: " ++ d[\desiredE].asFloat,  "F: " ++ d[\desiredF].asFloat,  "Fsharp: " ++  d[\desiredFsharp].asFloat,  "G: " ++ d[\desiredG].asFloat,  "Gsharp: " ++ d[\desiredGsharp].asFloat,  "A: " ++ d[\desiredA].asFloat,  "Asharp: " ++ d[\desiredAsharp].asFloat,  "B: " ++ d[\desiredB].asFloat], "energy: " ++d[\desiredEnergy].asFloa].postln;
 	}
 
 	*sendFeaturesToNets {
