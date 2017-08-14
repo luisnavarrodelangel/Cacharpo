@@ -11,11 +11,11 @@ import Numeric.LinearAlgebra.Data
 import GHC.Float
 
 
-numberOfInputs = 24
+numberOfInputs = 43
 numOfRolesInputs = 9
 numOfPitchRecognitionInputs = 12
 numOfEnergyInputs = 3
-port = 57610
+port = 57604
 delay = 40 -- 20 frames per second
 
 data InputsToNetworks = InputsToNetworks {rolesInputs :: [Float], pitchRecognitionInputs :: [Float], energyInputs :: [Float]}
@@ -25,9 +25,9 @@ instance Show InputsToNetworks where
   show (InputsToNetworks rs ps es) = "rolesInputs " ++ (show rs) ++ "pitchRecognitionInputs " ++ (show ps) ++ "energyInputs " ++ (show es)
 
 instance OSC InputsToNetworks where
-  toPacket (InputsToNetworks rs ps es) = Packet_Message $ message "/train" ds
+  toPacket (InputsToNetworks rs ps es) = Packet_Message $ message "/featuresToNet" ds
     where ds = (map d_put rs) ++ (map d_put ps) ++ (map d_put es) 
-  fromPacket (Packet_Message (Message "/train" ds)) | length ds == numberOfInputs = InputsToNetworks <$> rs <*> ps <*> es
+  fromPacket (Packet_Message (Message "/featuresToNet" ds)) | length ds == numberOfInputs = InputsToNetworks <$> rs <*> ps <*> es
     where rs = mapM d_get $ take numOfRolesInputs ds
           ps = mapM d_get $ take numOfPitchRecognitionInputs $ drop numOfRolesInputs ds
           es = mapM d_get $ take numOfEnergyInputs $ drop (numOfRolesInputs + numOfPitchRecognitionInputs) ds
