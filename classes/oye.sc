@@ -124,9 +124,9 @@ Oye {
 			listOfPossibilitiesForFirstPattern.remove(\loudness); listOfPossibilitiesForFirstPattern.remove(\useC); listOfPossibilitiesForFirstPattern.remove(\useCsharp);
 			listOfPossibilitiesForFirstPattern.remove(\useD); listOfPossibilitiesForFirstPattern.remove(\useDsharp); listOfPossibilitiesForFirstPattern.remove(\useE);
 			listOfPossibilitiesForFirstPattern.remove(\useF); listOfPossibilitiesForFirstPattern.remove(\useFsharp); listOfPossibilitiesForFirstPattern.remove(\useG);
-		    listOfPossibilitiesForFirstPattern.remove(\useGsharp); listOfPossibilitiesForFirstPattern.remove(\useA); listOfPossibilitiesForFirstPattern.remove(\useAsharp);
+			listOfPossibilitiesForFirstPattern.remove(\useGsharp); listOfPossibilitiesForFirstPattern.remove(\useA); listOfPossibilitiesForFirstPattern.remove(\useAsharp);
 			listOfPossibilitiesForFirstPattern.remove(\useB); listOfPossibilitiesForFirstPattern.remove(\energy);
-			listOfPossibilitiesForFirstPattern = listOfPossibilitiesForFirstPattern.choose;
+			listOfPossibilitiesForFirstPattern = listOfPossibilitiesForFirstPattern.choose; 	if (lThreeInputs	[\makeKick] >=0.8, {listOfPossibilitiesForSecondPattern.remove(\makeGuiro); listOfPossibilitiesForSecondPattern.remove(\makeCowbell)});
 			firstPatternChosen = listOfPossibilitiesForFirstPattern.asString;
 
 			//pick a pattern
@@ -175,7 +175,7 @@ Oye {
 				musicalMode = "waitingToHearTheChanges";
 				hasCowbell = true;
 				^["makeCowbell", "Ritmo.toca("++"\n"
-					++"campanaDb: -15," ++ "\n"
+					++"campanaDb: -20," ++ "\n"
 					++"campanaDur: 1,"++ "\n"
 					++"campanaPan: 0,"++ "\n"
 					++ "bomboDb: -15,"++ "\n"
@@ -227,8 +227,7 @@ Oye {
 			)};
 
 			// pick a second role for that role
-			listOfPossibilitiesForSecondPattern.remove(\loudness); listOfPossibilitiesForSecondPattern.remove(\useCmajorScale);listOfPossibilitiesForSecondPattern.remove(\useCsharp); listOfPossibilitiesForSecondPattern.remove(\useD); listOfPossibilitiesForSecondPattern.remove(\useDsharp); listOfPossibilitiesForSecondPattern.remove(\useE); listOfPossibilitiesForSecondPattern.remove(\useF); listOfPossibilitiesForSecondPattern.remove(\useFsharp); listOfPossibilitiesForSecondPattern.remove(\useG);   listOfPossibilitiesForSecondPattern.remove(\useGsharp); listOfPossibilitiesForSecondPattern.remove(\useA); listOfPossibilitiesForSecondPattern.remove(\useAsharp); listOfPossibilitiesForSecondPattern.remove(\useB); listOfPossibilitiesForSecondPattern.remove(\energy);
-			listOfPossibilitiesForSecondPattern.remove(firstPatternChosen.asSymbol);
+			listOfPossibilitiesForSecondPattern.remove(\loudness); listOfPossibilitiesForSecondPattern.remove(\useCmajorScale);listOfPossibilitiesForSecondPattern.remove(\useCsharp); listOfPossibilitiesForSecondPattern.remove(\useD); listOfPossibilitiesForSecondPattern.remove(\useDsharp); listOfPossibilitiesForSecondPattern.remove(\useE); listOfPossibilitiesForSecondPattern.remove(\useF); listOfPossibilitiesForSecondPattern.remove(\useFsharp); listOfPossibilitiesForSecondPattern.remove(\useG);   listOfPossibilitiesForSecondPattern.remove(\useGsharp); listOfPossibilitiesForSecondPattern.remove(\useA); listOfPossibilitiesForSecondPattern.remove(\useAsharp); listOfPossibilitiesForSecondPattern.remove(\useB); listOfPossibilitiesForSecondPattern.remove(\energy); 	listOfPossibilitiesForSecondPattern.remove(firstPatternChosen.asSymbol); if (firstPattern == "Ritmo", { listOfPossibilitiesForSecondPattern.remove(\makeKick);  listOfPossibilitiesForSecondPattern.remove(\makeGuiro);  listOfPossibilitiesForSecondPattern.remove(\makeCowbell)});
 			if (listOfPossibilitiesForSecondPattern.notEmpty, {
 				listOfPossibilitiesForSecondPattern = listOfPossibilitiesForSecondPattern.choose;
 				secondPatternChosen = listOfPossibilitiesForSecondPattern.asString;
