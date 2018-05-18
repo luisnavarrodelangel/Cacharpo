@@ -5,10 +5,13 @@ import Control.Monad
 import Control.Applicative
 import Control.Monad.Loops
 
-inputsPlusOutputs = 10
-numberOfInputs = 9
+inputsPlusOutputs = 43
+numOfRolesInputs = 9
+numOfPitchRecognitionInputs = 12
+numOfEnergyInputs = 3
 numberOfOutputs = 1
-port = 57005
+
+port = 57000
 delay = 40 -- 20 frames per secon
 
 data TrainingSample = TrainingSample {inputs :: [Float], outputs :: [Float]}
@@ -20,8 +23,8 @@ instance OSC TrainingSample where
   toPacket (TrainingSample xs ys) = Packet_Message $ message "/train" ds
     where ds = (map d_put xs) ++ (map d_put ys)
   fromPacket (Packet_Message (Message "/train" ds)) | length ds == inputsPlusOutputs = TrainingSample <$> xs <*> ys
-    where xs = mapM d_get $ take numberOfInputs ds
-          ys = mapM d_get $ drop numberOfInputs ds
+    where xs = mapM d_get $ take numberOfRolesInputs ds
+          ys = mapM d_get $ take numberOfOutputs $ drop (numberOfRolesInputs + numOfPitchRecognitionInputs + numOfEnergyInputs)  ds
   fromPacket _ = Nothing
 
 main = do

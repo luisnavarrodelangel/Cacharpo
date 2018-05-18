@@ -1,0 +1,12 @@
+#autores
+
+author:              Luis Navarro y David Ogborn
+maintainer:          navarrol@mcmaster.ca
+
+#licencia
+
+-This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+
+-Este trabajo está licenciado bajo una licencia internacional Creative Commons Attribution-ShareAlike 4.0.
+
+

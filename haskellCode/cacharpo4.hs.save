@@ -1,3 +1,4 @@
+
 module Thinking where
 import AI.HNN.FF.Network
 import Numeric.LinearAlgebra
@@ -15,7 +16,7 @@ numberOfInputs = 43
 numOfRolesInputs = 9
 numOfPitchRecognitionInputs = 12
 numOfEnergyInputs = 3
-port = 57000
+
 delay = 40 -- 20 frames per second
 
 data InputsToNetworks = InputsToNetworks {rolesInputs :: [Float], pitchRecognitionInputs :: [Float], energyInputs :: [Float]}
@@ -25,9 +26,9 @@ instance Show InputsToNetworks where
   show (InputsToNetworks rs ps es) = "rolesInputs " ++ (show rs) ++ "pitchRecognitionInputs " ++ (show ps) ++ "energyInputs " ++ (show es)
 
 instance OSC InputsToNetworks where
-  toPacket (InputsToNetworks rs ps es) = Packet_Message $ message "/train" ds
+  toPacket (InputsToNetworks rs ps es) = Packet_Message $ message "/featuresToNet" ds
     where ds = (map d_put rs) ++ (map d_put ps) ++ (map d_put es) 
-  fromPacket (Packet_Message (Message "/train" ds)) | length ds == numberOfInputs = InputsToNetworks <$> rs <*> ps <*> es
+  fromPacket (Packet_Message (Message "/featuresToNet" ds)) | length ds == numberOfInputs = InputsToNetworks <$> rs <*> ps <*> es
     where rs = mapM d_get $ take numOfRolesInputs ds
           ps = mapM d_get $ take numOfPitchRecognitionInputs $ drop numOfRolesInputs ds
           es = mapM d_get $ take numOfEnergyInputs $ drop (numOfRolesInputs + numOfPitchRecognitionInputs) ds
@@ -42,16 +43,18 @@ describeNet n = do
   putStrLn $ "vectorLength: " ++ (show l) ++ " rows: " ++ (show r) ++ " cols: " ++ (show c)
 
 main = do
-  melNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/mel_Net-0.001_923.nn"
-  tecladoNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/teclado_Net-0.001_261.nn" --285
-  bajoNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/bajo_Net-0.001_447.nn" --544
-  guiroNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/guiro_Net-0.001_261.nn"
-  cowbellNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/cowbell_Net-0.001_669.nn"
-  kickNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/kick_Net-0.001_195.nn" --1836
+  putStr "port: "
+  port <- getLine
+  melNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/melUltimate_Net-0.001_610.nn"
+  tecladoNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/tecladoUltimate_Net-0.001_285.nn"
+  bajoNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/bajoUltimate_Net-0.001_283.nn"
+  guiroNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/guiroUltimate_Net-0.001_87.nn"
+  cowbellNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/cowbellUltimate_Net-0.001_559.nn"
+  kickNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/kickUltimate_Net-0.001_1285.nn"
   pitchRecognitionNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/c-b+chCmajorScale_Net-0.001_2182.nn"
   energyNet <- loadNetwork "/home/lui/Dropbox/McMaster/MRP/ANN/nets/energy_Net-0.001_1554.nn"
   putStrLn "Cacharpo status: listening"
-  let t = udpServer "127.0.0.1" port
+  let t = udpServer "127.0.0.1" $ read port :: Int
   m <- openUDP "127.0.0.1" 57120
   withTransport t (oscHandler2 m melNet tecladoNet bajoNet guiroNet cowbellNet kickNet pitchRecognitionNet energyNet)
 
@@ -95,7 +98,7 @@ g t m melNet tecladoNet bajoNet guiroNet cowbellNet kickNet pitchRecognitionNet 
  
     let out = outMel' ++ outTeclado' ++ outBajo' ++ outGuiro' ++ outCowbell' ++ outKick' ++ outPitchRecognition' ++ outEnergy'
     sendMessage m $ message "/n" out
-    --print $ out
+    --print $ outLoudness' ++ outRoles'
     --print outLoudness'
     --print outRoles'
    -- putStr $ justInputRoles newState

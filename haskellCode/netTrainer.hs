@@ -16,7 +16,7 @@ main = do
   putStrLn "training samples loaded"
   startTrainingTime <- getCurrentTime
   putStrLn $ "training " ++ (show startTrainingTime)
-  train 1000000 s s' [40] "cowbellUltimate_Net-0.001_" 0.001
+  train 1000000 s s' [40] "bajo_Net-0.001_" 0.001
   endTime <- getCurrentTime
   let elapsed = diffUTCTime endTime startTime
   putStrLn $ "training completed in: " ++ (show elapsed)
@@ -46,12 +46,12 @@ train' s s' countingUp countingDown prefix rate n = do
 
 loadTrainingSamples :: IO (Samples Double)
 loadTrainingSamples = do
-  h <- openFile "cowbellAug12Samples.txt" ReadMode
+  h <- openFile "/home/lui/Cacharpo/trainingSets/bajo/Aug-14-2017/bajoSamples.txt" ReadMode
   mainLoop h
 
 loadCrossValSamples :: IO (Samples Double)
 loadCrossValSamples = do
-  h <- openFile "cowbellAug12Samples.txt" ReadMode
+  h <- openFile "/home/lui/Cacharpo/trainingSets/bajo/Aug-14-2017/bajoCVSamples.txt" ReadMode
   mainLoop h
 
 mainLoop :: Handle -> IO (Samples Double)
